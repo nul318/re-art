@@ -17,6 +17,9 @@ import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 
 import java.util.ArrayList;
 
+import com.musica.android.reart.R;
+
+
 public class CategoryActivity extends AppCompatActivity {
     RecyclerView mRecyclerViewKeyword;
     RecyclerView mRecyclerViewCard;
