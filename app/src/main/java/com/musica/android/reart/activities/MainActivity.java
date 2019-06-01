@@ -26,6 +26,7 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mContext=this;
         initViews();
     }
 
@@ -119,7 +120,7 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
         actionMenu.getSubActionItems().get(2).view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, DetailActivity.class);
+                Intent intent = new Intent(mContext, CategoryActivity.class);
                 startActivity(intent);
             }
         });
