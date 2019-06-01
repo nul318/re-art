@@ -1,47 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/group_4"
     android:orientation="vertical"
     tools:context=".activities.MainActivity">
 
-    <TextView
-        android:id="@+id/response"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:orientation="vertical">
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/first_test"
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_height="wrap_content"
-            android:text="@string/get_api_example"
-            android:onClick="onClick"
-            />
+            app:srcCompat="@drawable/re_art" />
 
-        <Button
-            android:id="@+id/second_test"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/get_api_path_variable_example"
-            android:onClick="onClick"
-            />
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
 
-        <Button
-            android:id="@+id/third_test"
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/post_api_body_data_example"
-            android:onClick="onClick"
-            />
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="6dp"
+            app:srcCompat="@drawable/ic_money" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="100" />
     </LinearLayout>
 
-</FrameLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_vp_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="25dp"/>
+</LinearLayout>
