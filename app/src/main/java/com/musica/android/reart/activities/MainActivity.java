@@ -89,9 +89,9 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
         ImageView rlIcon2 = new ImageView(this);
         ImageView rlIcon3 = new ImageView(this);
 
-        rlIcon1.setImageDrawable(getResources().getDrawable(R.drawable.ic_person));
+        rlIcon1.setImageDrawable(getResources().getDrawable(R.drawable.ic_write_wh_24));
         rlIcon2.setImageDrawable(getResources().getDrawable(R.drawable.ic_crown));
-        rlIcon3.setImageDrawable(getResources().getDrawable(R.drawable.ic_timeline));
+        rlIcon3.setImageDrawable(getResources().getDrawable(R.drawable.ic_crown));
 
 
         FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
@@ -128,7 +128,7 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
 
     @Override
     public void onMenuOpened(FloatingActionMenu floatingActionMenu) {
-            
+
     }
 
     @Override
