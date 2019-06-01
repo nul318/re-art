@@ -10,5 +10,8 @@
     <string name="get_api_path_variable_example">GET API Path Variable Example</string>
     <string name="post_api_body_data_example">POST API Body Data Example</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>
