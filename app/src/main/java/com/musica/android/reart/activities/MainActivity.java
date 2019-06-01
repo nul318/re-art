@@ -1,5 +1,7 @@
 package com.musica.android.reart.activities;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -19,7 +21,7 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
     //    Views Naming Rule
     ViewPager mPager;
     FragmentStatePagerAdapter mAdapter;
-
+    Context mContext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,15 +32,8 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
     @Override
     public void onClick(View v) {
 //        switch (v.getId()) {
-//            case R.id.first_test:
-//                firstTest();
-//                break;
-//            case R.id.second_test:
-//                secondTest(1);
-//                break;
-//            case R.id.third_test:
-//                thirdTest(Utils.getNowByTimeStamp());
-//                break;
+//            case R.id.main_vp_list:
+//
 //        }
     }
 
@@ -50,10 +45,10 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
         mAdapter = new ParallaxAdapter(getSupportFragmentManager());
         ((ParallaxAdapter) mAdapter).setPager(mPager); //only for this transformer
 //        mPager.setPageTransformer(false, pt);
-        ((ParallaxAdapter) mAdapter).add(new ParallaxFragment(R.drawable.group_7));
-        ((ParallaxAdapter) mAdapter).add(new ParallaxFragment(R.drawable.main2));
-        ((ParallaxAdapter) mAdapter).add(new ParallaxFragment(R.drawable.main3));
-        ((ParallaxAdapter) mAdapter).add(new ParallaxFragment(R.drawable.main4));
+        ((ParallaxAdapter) mAdapter).add(new ParallaxFragment(R.drawable.reart1));
+        ((ParallaxAdapter) mAdapter).add(new ParallaxFragment(R.drawable.reart2));
+        ((ParallaxAdapter) mAdapter).add(new ParallaxFragment(R.drawable.reart3));
+        ((ParallaxAdapter) mAdapter).add(new ParallaxFragment(R.drawable.reart4));
         //       뷰페이저 미리보기 설정//
         mPager.setClipToPadding(false);
         int dpValue = 20;
@@ -62,6 +57,14 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
         mPager.setPadding(margin, 0, margin, 0);
         mPager.setPageMargin(margin/2);
         mPager.setAdapter(mAdapter);
+        mPager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, CategoryActivity.class);
+                startActivity(intent);
+//                break;
+            }
+        });
 
         ImageView icon = new ImageView(this); // Create an icon
         icon.setImageDrawable(getDrawable(R.drawable.ic_hone));
@@ -91,7 +94,7 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
 
         rlIcon1.setImageDrawable(getResources().getDrawable(R.drawable.ic_write_wh_24));
         rlIcon2.setImageDrawable(getResources().getDrawable(R.drawable.ic_crown));
-        rlIcon3.setImageDrawable(getResources().getDrawable(R.drawable.ic_crown));
+        rlIcon3.setImageDrawable(getResources().getDrawable(R.drawable.ic_timeline));
 
 
         FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
@@ -116,7 +119,8 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
         actionMenu.getSubActionItems().get(2).view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(mContext, DetailActivity.class);
+                startActivity(intent);
             }
         });
     }

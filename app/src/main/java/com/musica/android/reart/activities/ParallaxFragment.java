@@ -1,6 +1,8 @@
 package com.musica.android.reart.activities;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Matrix;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,9 +19,11 @@ public class ParallaxFragment extends Fragment {
 
     private ParallaxAdapter mAdapter;
     int mImageId;
+    Context mContext;
     @SuppressLint("ValidFragment")
     public ParallaxFragment(int resource) {
         mImageId=resource;
+        mContext=getActivity();
     }
 
     @Override
@@ -31,6 +35,14 @@ public class ParallaxFragment extends Fragment {
         final ImageView image = v.findViewById(R.id.image);
 
         image.setImageResource(mImageId);
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), DetailActivity.class);
+                startActivity(intent);
+            }
+        });
+
 //        image.post(new Runnable() {
 //            @Override
 //            public void run() {
