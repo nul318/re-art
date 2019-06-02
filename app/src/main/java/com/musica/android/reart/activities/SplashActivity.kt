@@ -15,6 +15,6 @@ class SplashActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()  //여기에 딜레이 후 시작할 작업들을 입력
-        }, 2000)//
+        }, 1500)//
     }
 }
