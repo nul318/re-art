@@ -13,7 +13,6 @@
             android:layout_width="match_parent"
             android:layout_height="350dp">
 
-
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -57,6 +56,8 @@
                 android:layout_marginTop="180dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/profile_img" />
+
+
         </FrameLayout>
 
         <LinearLayout
@@ -64,7 +65,7 @@
             android:layout_height="50dp"
             android:orientation="horizontal"
             android:weightSum="1"
-            android:background="@drawable/bg_gray_border">
+            android:background="@drawable/rectangle_6">
 
             <TextView
                 android:layout_width="0dp"
@@ -80,18 +81,19 @@
                 android:src="@android:color/darker_gray"
                 android:id="@+id/po_image1"
                 app:btn_color="@android:color/darker_gray"
-                app:btn_fill_color="#FF6666"
+                app:btn_fill_color="#466357"
                 app:allow_random_color="false"
-                app:enable_flashing="false"
-                app:big_shine_color="#FF6666"
+                app:enable_flashing="true"
+                app:big_shine_color="#466357"
                 app:click_animation_duration="200"
                 app:shine_animation_duration="1500"
                 app:shine_turn_angle="10"
                 app:small_shine_offset_angle="20"
-                app:shine_distance_multiple="15"
+                app:shine_distance_multiple="1.5"
                 app:small_shine_color="#CC9999"
                 app:shine_count="8"
-                app:siShape="@raw/like"/>
+                android:layout_marginTop="-6dp"
+                app:siShape="@raw/heart"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -100,6 +102,7 @@
                 android:text="330"
                 android:textColor="#000000"
                 android:textSize="12sp"
+                android:layout_marginTop="-6dp"
                 android:layout_gravity="center_vertical"/>
 
             <ImageView
@@ -108,6 +111,7 @@
                 android:layout_marginRight="50dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_scrap_gr_24"
+                android:layout_marginTop="-6dp"
                 android:layout_gravity="center_vertical"/>
         </LinearLayout>
 
