@@ -108,7 +108,8 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
         actionMenu.getSubActionItems().get(0).view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(mContext, FirstWritingActivity.class);
+                startActivity(intent);
             }
         });
         actionMenu.getSubActionItems().get(1).view.setOnClickListener(new View.OnClickListener() {
