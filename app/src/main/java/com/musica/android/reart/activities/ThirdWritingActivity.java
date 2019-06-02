@@ -16,6 +16,16 @@ public class ThirdWritingActivity extends SuperActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third_writing);
+
+        mButtonSave=findViewById(R.id.third_writing_btn);
+        mButtonSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ThirdWritingActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -25,13 +35,6 @@ public class ThirdWritingActivity extends SuperActivity{
 
     @Override
     void initViews() {
-        mButtonSave=findViewById(R.id.first_writing_btn);
-        mButtonSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ThirdWritingActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }
