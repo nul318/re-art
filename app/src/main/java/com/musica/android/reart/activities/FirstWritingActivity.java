@@ -56,7 +56,7 @@ public class FirstWritingActivity extends SuperActivity {
         fragments.add(imageFragment3);
 
         mViewPagerImage.setClipToPadding(false);
-        int dpValue = 30;
+        int dpValue = 40;
         float d = getResources().getDisplayMetrics().density;
         int margin = (int) (dpValue * d);
         mViewPagerImage.setPadding(margin, 0, margin, 0);
