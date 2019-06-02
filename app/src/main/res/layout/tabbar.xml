@@ -9,10 +9,10 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/ic_green" />
+            android:src="@drawable/heartselecter" />
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/btn_bottom_navi_map_tab"
@@ -20,10 +20,10 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/ic_scrap_gr_24" />
+            android:src="@drawable/flagselsecter" />
     </RelativeLayout>
 
 </LinearLayout>
