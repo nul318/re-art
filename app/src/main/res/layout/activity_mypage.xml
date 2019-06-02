@@ -72,7 +72,7 @@
             android:layout_marginLeft="41dp"
             android:layout_width="254dp"
             android:layout_height="42dp"
-            android:src="@drawable/group_8"
+            android:src="@drawable/mypage"
             android:layout_below="@+id/tv_yourname"
             />
     </RelativeLayout>

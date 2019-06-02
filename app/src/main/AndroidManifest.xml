@@ -13,13 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
         <activity android:name=".activities.ThirdWritingActivity"></activity>
         <activity android:name=".activities.SecondWritingActivity" />
         <activity android:name=".activities.FirstWritingActivity" />
         <activity android:name=".activities.DetailActivity" />
         <activity android:name=".activities.MypageActivity" />
+
+        <activity android:name=".activities.MainActivity"></activity>
+        <activity android:name=".activities.LankActivity" />
+
         <activity android:name=".activities.CategoryActivity" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -19,6 +19,7 @@ import com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer;
 public class MainActivity extends SuperActivity implements FloatingActionMenu.MenuStateChangeListener, View.OnLayoutChangeListener{
 
     //    Views Naming Rule
+    ImageView imageView2;
     ViewPager mPager;
     FragmentStatePagerAdapter mAdapter;
     Context mContext;
@@ -40,6 +41,7 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
 
     @Override
     void initViews() {
+        imageView2 = findViewById(R.id.imageView2);
         mPager = findViewById(R.id.main_vp_list);
         mPager.setPageTransformer(false, new ParallaxPagerTransformer(R.id.image));
 
@@ -66,7 +68,13 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
 //                break;
             }
         });
-
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, MypageActivity.class);
+                startActivity(intent);
+            }
+        });
         ImageView icon = new ImageView(this); // Create an icon
         icon.setImageDrawable(getDrawable(R.drawable.ic_hone));
 
@@ -108,14 +116,11 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
         actionMenu.getSubActionItems().get(0).view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< HEAD
+
                 Intent intent = new Intent(mContext, FirstWritingActivity.class);
                 startActivity(intent);
-=======
-                Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
-                startActivity(intent);
 
->>>>>>> origin/mudol
+
             }
         });
         actionMenu.getSubActionItems().get(1).view.setOnClickListener(new View.OnClickListener() {
@@ -128,11 +133,9 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
         actionMenu.getSubActionItems().get(2).view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< HEAD
+
                 Intent intent = new Intent(mContext, CategoryActivity.class);
-=======
-                    Intent intent = new Intent(getApplicationContext(), CategoryActivity.class);
->>>>>>> origin/mudol
+
                 startActivity(intent);
             }
         });
