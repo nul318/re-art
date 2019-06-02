@@ -3,9 +3,7 @@ package com.musica.android.reart.activities;
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
 import com.google.gson.Gson;
-
 import io.reactivex.disposables.CompositeDisposable;
 
 public abstract class SuperActivity extends AppCompatActivity {
