@@ -1,5 +1,6 @@
 package com.musica.android.reart.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -104,19 +105,23 @@ public class MainActivity extends SuperActivity implements FloatingActionMenu.Me
         actionMenu.getSubActionItems().get(0).view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
+                startActivity(intent);
 
             }
         });
         actionMenu.getSubActionItems().get(1).view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(), LankActivity.class);
+                startActivity(intent);
             }
         });
         actionMenu.getSubActionItems().get(2).view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                    Intent intent = new Intent(getApplicationContext(), CategoryActivity.class);
+                startActivity(intent);
             }
         });
     }
